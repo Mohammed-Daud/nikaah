@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/members', 'MembersController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/member-registration', 'Auth\MemberAuthController@register')->name('member.registration');
+
