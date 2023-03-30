@@ -1,4 +1,3 @@
-
 ## Installation
 
 - Clone this repositort
@@ -7,3 +6,8 @@
 - run "composer install" cmd.
 - run "php artisan migrate" cmd.
 - run "php artisan serve" cmd.
+
+
+## ToDo
+- [] forgot password
+

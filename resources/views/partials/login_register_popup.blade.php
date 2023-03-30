@@ -26,9 +26,10 @@
                         </strong>
                     </p>
                     <div class="box-email-datails">
-                        <form method="post" class="dspdp-form-inline">
+                        <form method="post" id="forgot-pass-form" class="dspdp-form-inline">
+                            <div class="wpee-login-error"></div>
                             <div class="form-group">
-                                <label for="user_n_email">Username or Email</label>
+                                <label for="user_n_email">Email</label>
                                 <input type="text" id="user_n_email" class="form-control">
                                 <input type="submit" class="dspdp-btn dspdp-btn-default" id="get-password" value="Get Password">
                                 <img width="32" height="32" id="loading_reset" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2032%2032&#39;%3E%3C/svg%3E" alt="Loading" data-lazy-src="https://nikaah.wpdating.com/wp-content/plugins/dsp_dating//images/loading.gif">

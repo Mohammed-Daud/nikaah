@@ -9,4 +9,8 @@ class MembersController extends Controller
     public function index(){
         return view('members.index');
     }
+
+    public function editProfile(){
+        return view('members.profile_edit');
+    }
 }

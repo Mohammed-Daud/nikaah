@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class MemberAuthController extends Controller
 {
@@ -54,7 +55,7 @@ class MemberAuthController extends Controller
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
-            'user_type' => 'customer',
+            'user_type' => 'member',
             'password' => Hash::make($request->password),
         ]);
 
@@ -81,5 +82,50 @@ class MemberAuthController extends Controller
         // $this->validator($request->all())->validate();
 
         
+    }
+
+    public function passwordResetRequest(Request $request){
+        
+        $existingMember = User::where([
+            'email' => $request->email,
+        ])->first();
+
+        if(!$existingMember){
+            return response()->json([
+                'status' => false,
+                'errors' => [
+                    'toastr' => 'Email is not registered.'
+                ]
+            ]);
+        }
+
+        $newPassword = $this->generatePassport();
+        $user = User::find($existingMember->id);
+        $user->password = Hash::make($newPassword);
+        $user->save();
+
+        $data = [
+            'newPassword' => $newPassword
+        ];
+        Mail::send('mails.reset_pass_link', $data, function($message) use ($existingMember) {
+            $message->to($existingMember->email, $existingMember->first_name)
+                    ->subject('Reset Password');
+            $message->from('xyz@gmail.com','Admin');
+        });
+
+        
+
+        return response()->json([
+            'status' => true
+        ],200);
+    }
+
+    private function generatePassport() {
+        $passport = '';
+        $passport .= chr(rand(65, 90));
+        $passport .= chr(rand(65, 90));
+        $passport .= rand(1000000, 9999999);
+        $passport .= chr(rand(65, 90));
+        return $passport;
     }
 }

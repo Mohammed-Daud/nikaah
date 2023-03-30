@@ -19,10 +19,10 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard($guard)->check()) {
             $type = Auth::user()->type;
-            if($type == 'customer'){
+            if($type == 'member'){
                 return redirect('/home');
             }
-            return redirect('/admin/welcome');
+            return redirect('/admin/dashboard');
         }
 
         return $next($request);
