@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,18 +16,27 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('homepage');
 
 Route::get('/members', 'MembersController@index');
 
 \Illuminate\Support\Facades\Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+
+// Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/member-login', 'Auth\MemberAuthController@login')->middleware('guest');
 Route::post('/member-registration', 'Auth\MemberAuthController@register')->name('member.registration');
 Route::post('/member-password-reset', 'Auth\MemberAuthController@passwordResetRequest');
 
 
-Route::get('profile/{id}/edit-profile', 'MembersController@editProfile');
+Route::group(['middleware' => ['auth']],function(){
+    Route::get('profile/{id}/edit-profile', 'MembersController@editProfile');
+    Route::post('profile-image/upload', 'MembersController@profileImageUpload');
+    Route::post('cover-photo/upload', 'MembersController@coverPhotoUpload');
+    Route::post('update-profile', 'MembersController@updateProfile');
+    
+});
 
 //ADMIN 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function(){
@@ -58,4 +68,8 @@ Route::get('table', function () {
 });
 Route::get('charts', function () {
     return view('dummy.charts');
+});
+
+Route::get('config-cache', function () {
+    Artisan::call('config:cache');
 });

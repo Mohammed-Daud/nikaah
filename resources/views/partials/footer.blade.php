@@ -3,47 +3,49 @@
         <div class="content-wrap d-flex col-4 space-bet">
             <div id="footer-1">
                 <div class="company-detail-wrap">
-                <figure class="footer-logo">
-                    
-                    <a class="navbar-brand" href="#">
-                        <img width="143" height="47" src="" alt="" data-lazy-src="https://nikaah.wpdating.com/wp-content/uploads/2021/09/logo.png">
-                        <noscript><img width="143" height="47" src="https://nikaah.wpdating.com/wp-content/uploads/2021/09/logo.png" alt=""></noscript>
-                    </a>
-                </figure>
-                <div class="desc-wrap">
-                    <li id="block-5" class="widget widget_block">
-                        <div class="is-layout-flow wp-block-group">
-                            <div class="wp-block-group__inner-container"></div>
-                        </div>
-                    </li>
-                    <li id="block-6" class="widget widget_block">
-                        <div class="is-layout-flow wp-block-group">
-                            <div class="wp-block-group__inner-container"></div>
-                        </div>
-                    </li>
-                    <li id="text-2" class="widget widget_text">
-                        <div class="textwidget">
-                            <p><span style="font-weight: 400;">An-Nikaah Matrimony is committed to find you the perfect match blessed by Allah since 2014.</span></p>
-                        </div>
-                    </li>
-                </div>
-                <ul class="social-links no-dot d-flex">
-                    <li><a class="d-i-flex align-center justify-center" target="_blank" href="#"><i class="fa fa-facebook-f"></i></a> </li>
-                    <li><a class="d-i-flex align-center justify-center" target="_blank" href="#"><i class="fa fa-twitter"></i></a> </li>
-                    <li><a class="d-i-flex align-center justify-center" target="_blank" href="#"><i class="fa fa-linkedin"></i></a> </li>
-                </ul>
+                    <figure class="footer-logo">
+                        <a class="navbar-brand" href="#">
+                        <img width="143" height="47" src="{{ asset('images/footer_logo.png') }}" alt="">
+                        </a>
+                    </figure>
+                    <div class="desc-wrap">
+                        <li id="block-5" class="widget widget_block">
+                            <div class="is-layout-flow wp-block-group">
+                                <div class="wp-block-group__inner-container"></div>
+                            </div>
+                        </li>
+                        <li id="block-6" class="widget widget_block">
+                            <div class="is-layout-flow wp-block-group">
+                                <div class="wp-block-group__inner-container"></div>
+                            </div>
+                        </li>
+                        <li id="text-2" class="widget widget_text">
+                            <div class="textwidget">
+                                <p>
+                                    <span style="font-weight: 400;">
+                                        An-Nikaah Matrimony is committed to find you the perfect match blessed by Allah since 2014.
+                                    </span>
+                                </p>
+                            </div>
+                        </li>
+                    </div>
+                    <ul class="social-links no-dot d-flex">
+                        <li><a class="d-i-flex align-center justify-center" target="_blank" href="#"><i class="fa fa-facebook-f"></i></a> </li>
+                        <li><a class="d-i-flex align-center justify-center" target="_blank" href="#"><i class="fa fa-twitter"></i></a> </li>
+                        <li><a class="d-i-flex align-center justify-center" target="_blank" href="#"><i class="fa fa-linkedin"></i></a> </li>
+                    </ul>
                 </div>
             </div>
             <div id="footer-2" class="quick-link-wrap">
                 <li id="nav_menu-1" class="widget widget_nav_menu">
-                <h3 class="widget-title footer-title">Quick Links</h3>
-                <div class="menu-quick-links-container">
-                    <ul id="menu-quick-links" class="menu">
-                        <li id="menu-item-368" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-368"><a href="testimonials.html">Testimonials</a></li>
-                        
-                        <li id="menu-item-372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-372"><a href="contactus.html">Contact Us</a></li>
-                    </ul>
-                </div>
+                    <h3 class="widget-title footer-title">Quick Links</h3>
+                    <div class="menu-quick-links-container">
+                        <ul id="menu-quick-links" class="menu">
+                            <li id="menu-item-368" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-368"><a href="#">Testimonials</a></li>
+                            
+                            <li id="menu-item-372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-372"><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
                 </li>
             </div>
             <div id="footer-3" class="contact-detail-wrap">
@@ -93,7 +95,7 @@
         <div class="copyright-wrap d-flex space-bet align-center">
             <div class="left-content">
                 <div class="copyright">
-                <p class="mb-0"> © 2023 An-Nikaah. All rights reserved</p>
+                <p class="mb-0"> © {{ date('Y') }} An-Nikaah. All rights reserved</p>
                 </div>
             </div>
             <div class="right-content">

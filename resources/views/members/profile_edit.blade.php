@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>Profile &#8211; Nikaah</title>
     <meta name='robots' content='noindex, nofollow' />
     <link rel='dns-prefetch' href='//connect.facebook.net' />
@@ -633,16 +633,17 @@
     <link rel='stylesheet' id='elementor-post-384-css' href='https://nikaah.wpdating.com/wp-content/uploads/elementor/css/post-384.css?ver=1649657428' media='all' />
     <link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.1.1' media='all' />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <script src='https://nikaah.wpdating.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js'></script>
-    <script src='https://nikaah.wpdating.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
-    <script src='https://nikaah.wpdating.com/wp-content/plugins/dsp-login/js/blockui.js?ver=1.0' id='blockui-js'></script>
+    <script>const appUrl = "{{ config('app.url') }}";</script>
+    <script src='{{ asset("js/jquery.min.js") }}' id='jquery-core-js'></script>
+    <script src="{{ asset('js/jquery-migrate.min.js') }}" id='jquery-migrate-js'></script>
+    <script src="{{ asset('js/blockui.js') }}" id='blockui-js'></script>
     <script id='ds-login-js-extra'>
         var sidebar_login_params = {
             "ajax_url": "https:\/\/nikaah.wpdating.com\/wp-admin\/admin-ajax.php",
             "login_nonce": "72a77cbb29"
         };
     </script>
-    <script src='https://nikaah.wpdating.com/wp-content/plugins/dsp-login/js/dsp-login.js?ver=1.0' id='ds-login-js'></script>
+    <script src="{{ asset('js/dsp-login.js') }}" id='ds-login-js'></script>
     <script src='https://nikaah.wpdating.com/wp-content/plugins/dsp_dating/js/modernizr-2.8.3.min.js?ver=6.1.1' id='modernizr-js'></script>
     <script src='https://nikaah.wpdating.com/wp-content/plugins/dsp_dating/js/respond.min.js?ver=6.1.1' id='dsp_respond_script-js'></script>
     <script src='https://nikaah.wpdating.com/wp-content/plugins/dsp_dating/js/report-comment.js?ver=6.1.1' id='report-comment-js'></script>
@@ -889,7 +890,8 @@
                 <feComposite in2="SourceGraphic" operator="in" />
             </filter>
         </defs>
-    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
         <defs>
             <filter id="wp-duotone-grayscale">
                 <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
@@ -902,7 +904,8 @@
                 <feComposite in2="SourceGraphic" operator="in" />
             </filter>
         </defs>
-    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
         <defs>
             <filter id="wp-duotone-purple-yellow">
                 <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
@@ -915,7 +918,8 @@
                 <feComposite in2="SourceGraphic" operator="in" />
             </filter>
         </defs>
-    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
         <defs>
             <filter id="wp-duotone-blue-red">
                 <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
@@ -928,7 +932,8 @@
                 <feComposite in2="SourceGraphic" operator="in" />
             </filter>
         </defs>
-    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
         <defs>
             <filter id="wp-duotone-midnight">
                 <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
@@ -941,7 +946,8 @@
                 <feComposite in2="SourceGraphic" operator="in" />
             </filter>
         </defs>
-    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
         <defs>
             <filter id="wp-duotone-magenta-yellow">
                 <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
@@ -954,7 +960,8 @@
                 <feComposite in2="SourceGraphic" operator="in" />
             </filter>
         </defs>
-    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
         <defs>
             <filter id="wp-duotone-purple-green">
                 <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
@@ -967,7 +974,8 @@
                 <feComposite in2="SourceGraphic" operator="in" />
             </filter>
         </defs>
-    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
         <defs>
             <filter id="wp-duotone-blue-orange">
                 <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
@@ -1047,14 +1055,15 @@
                                                                 <div class="user-info-wrapper">
                                                                     <div class="wpee-user-rating-wrap">
                                                                         <h4 class="username text-white">
-                                                                            test324242432 </h4>
+                                                                            {{ auth()->user()->full_name }}
+                                                                        </h4>
                                                                     </div>
 
 
                                                                     <div class="age-location-wrap text-white">
                                                                         <div class="profile-age">
                                                                             <span class="age-title">Age:</span>
-                                                                            61
+                                                                            {{ auth()->user()->age_in_years }}
                                                                         </div>
 
                                                                         <div class="profile-credits">
@@ -1101,9 +1110,10 @@
                                                             import {
                                                                 openDefaultEditor,
                                                                 appendDefaultEditor
-                                                            } from "https://nikaah.wpdating.com/wp-content/plugins/dsp_dating/wpdating-gallery/lib/js/pintura.min.js";
+                                                            } from "{{ asset('js/pintura.min.js') }}";
 
-                                                            const ajax_url = 'https://nikaah.wpdating.com/wp-admin/admin-ajax.php';
+                                                            const ajax_url = '{{ asset("profile-image/upload") }}';
+                                                            const ajax_cover_photo_url = '{{ asset("cover-photo/upload") }}';
 
                                                             // Listen for changes on a profile image file input element
                                                             const profilePic = document.querySelector('.change-profile-image input[type="file"]');
@@ -1143,11 +1153,15 @@
                                                                     }) => {
                                                                         let form_data = new FormData();
                                                                         form_data.append('file', dest);
+                                                                        
                                                                         form_data.append('nonce', jQuery("#change-profile-pic-form input[name=wpee_profile_photo_security]").val());
                                                                         form_data.append('action', jQuery("#change-profile-pic-form input[name=action]").val());
                                                                         form_data.append('user_id', jQuery("#change-profile-pic-form input[name=user_id]").val());
                                                                         form_data.append('lang', '');
                                                                         jQuery.ajax({
+                                                                            headers: {
+                                                                                'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+                                                                            },
                                                                             url: ajax_url,
                                                                             type: 'POST',
                                                                             contentType: false,
@@ -1204,7 +1218,10 @@
                                                                         form_data.append('action', cover_action);
                                                                         form_data.append('lang', '');
                                                                         jQuery.ajax({
-                                                                            url: ajax_url,
+                                                                            headers: {
+                                                                                'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+                                                                            },
+                                                                            url: ajax_cover_photo_url,
                                                                             type: "POST",
                                                                             processData: false,
                                                                             contentType: false,
@@ -1344,42 +1361,69 @@
                                                                 <div class="profile-section-wrap main-profile-mid-wrapper">
                                                                     <ul class="profile-section-tab">
                                                                         <li class="profile-section-tab-title active">
-                                                                            <a href="https://nikaah.wpdating.com/profile/test324242432/edit-profile/">
-                                                                                Edit your profile </a>
+                                                                            <a href="{{ url('profile/'.auth()->user()->id.'/edit-profile') }}">
+                                                                                Edit your profile 
+                                                                            </a>
                                                                         </li>
 
                                                                         <li class="profile-section-tab-title ">
-                                                                            <a id="wpee_edit_location" href="javascript:void(0);" data-siteurl="https://nikaah.wpdating.com/profile/test324242432/edit-profile/location">
-                                                                                Edit Location </a>
+                                                                            <a id="wpee_edit_location" href="javascript:void(0);" data-siteurl="{{ url('profile/'.auth()->user()->id.'/edit-profile/location') }}">
+                                                                                Edit Location 
+                                                                            </a>
                                                                         </li>
 
                                                                     </ul>
                                                                     <div class="wpee-edit-profile-inner profile-section-content">
-                                                                        <form name="frm_u_profile" id="frm_u_profile" action="" method="post" enctype="multipart/form-data" class="dspdp-form-horizontal">
+                                                                        <form name="frm_u_profile" id="frm_u_profile" action="{{ url('update-profile') }}" method="post" enctype="multipart/form-data" class="dspdp-form-horizontal">
+                                                                            @csrf
                                                                             <div class="wpee-edit-profile-form">
                                                                                 <div class="heading-submenu">
                                                                                     Personal Information </div>
                                                                                 <div class="edit-profile">
                                                                                     <div class="form-inline">
                                                                                         <div class="form-group">
-                                                                                            <label for="gender">I am<span class="wpee-mandatory-input">*</span></label>
+                                                                                            <label for="gender">
+                                                                                                I am
+                                                                                                <span class="wpee-mandatory-input">
+                                                                                                    *
+                                                                                                </span>
+                                                                                            </label>
                                                                                             <select class="form-control dspdp-form-control mt-0" id="gender" name="gender" disabled='disabled'>
-                                                                                                <option value="">Select</option>
-                                                                                                <option value="M" selected="selected">Man</option>
-                                                                                                <option value="F">Woman</option>
-                                                                                                <option value="C">Couple</option>
+                                                                                                <option value="">
+                                                                                                    Select
+                                                                                                </option>
+                                                                                                <option value="M" selected="selected">
+                                                                                                    Man
+                                                                                                </option>
+                                                                                                <option value="F">
+                                                                                                    Woman
+                                                                                                </option>
+                                                                                                <option value="C">
+                                                                                                    Couple
+                                                                                                </option>
                                                                                             </select>
                                                                                         </div>
 
                                                                                         <div class="form-group">
                                                                                             <label for="seeking">
-                                                                                                Seeking a<span class="wpee-mandatory-input">*</span>
+                                                                                                Seeking a
+                                                                                                <span class="wpee-mandatory-input">
+                                                                                                    *
+                                                                                                </span>
                                                                                             </label>
                                                                                             <select id="seeking" name="seeking" class="form-control dspdp-form-control mt-0">
-                                                                                                <option value="">Select</option>
-                                                                                                <option value="M">Man</option>
-                                                                                                <option value="F" selected="selected">Woman</option>
-                                                                                                <option value="C">Couple</option>
+                                                                                                <option value="">
+                                                                                                    Select
+                                                                                                </option>
+                                                                                                <option value="M">
+                                                                                                    Man
+                                                                                                </option>
+                                                                                                <option value="F" selected="selected">
+                                                                                                    Woman
+                                                                                                </option>
+                                                                                                <option value="C">
+                                                                                                    Couple
+                                                                                                </option>
                                                                                             </select>
                                                                                         </div>
                                                                                     </div>
@@ -1388,407 +1432,48 @@
                                                                                         <div class="form-inline age-group">
                                                                                             <div class="form-group">
                                                                                                 <select name="dsp_mon" class="form-control dspdp-form-control mt-0">
-                                                                                                    <option value="1">
-                                                                                                        January </option>
-                                                                                                    <option value="2">
-                                                                                                        February </option>
-                                                                                                    <option value="3">
-                                                                                                        March </option>
-                                                                                                    <option value="4">
-                                                                                                        April </option>
-                                                                                                    <option value="5">
-                                                                                                        May </option>
-                                                                                                    <option value="6">
-                                                                                                        June </option>
-                                                                                                    <option value="7" selected>
-                                                                                                        July </option>
-                                                                                                    <option value="8">
-                                                                                                        August </option>
-                                                                                                    <option value="9">
-                                                                                                        September </option>
-                                                                                                    <option value="10">
-                                                                                                        October </option>
-                                                                                                    <option value="11">
-                                                                                                        November </option>
-                                                                                                    <option value="12">
-                                                                                                        December </option>
+                                                                                                    <option value="01">January</option>
+                                                                                                    <option value="02">February</option>
+                                                                                                    <option value="03">March</option>
+                                                                                                    <option value="04">April</option>
+                                                                                                    <option value="05">May</option>
+                                                                                                    <option value="06">June</option>
+                                                                                                    <option value="07">July</option>
+                                                                                                    <option value="08">August</option>
+                                                                                                    <option value="09">September</option>
+                                                                                                    <option value="10">October</option>
+                                                                                                    <option value="11">November</option>
+                                                                                                    <option value="12">December</option>
                                                                                                 </select>
                                                                                             </div>
                                                                                             <div class="form-group">
                                                                                                 <select name="dsp_day" class="form-control dspdp-form-control mt-0">
-                                                                                                    <option value="1">
-                                                                                                        1 </option>
-                                                                                                    <option value="2">
-                                                                                                        2 </option>
-                                                                                                    <option value="3">
-                                                                                                        3 </option>
-                                                                                                    <option value="4">
-                                                                                                        4 </option>
-                                                                                                    <option value="5">
-                                                                                                        5 </option>
-                                                                                                    <option value="6">
-                                                                                                        6 </option>
-                                                                                                    <option value="7">
-                                                                                                        7 </option>
-                                                                                                    <option value="8">
-                                                                                                        8 </option>
-                                                                                                    <option value="9">
-                                                                                                        9 </option>
-                                                                                                    <option value="10" selected>
-                                                                                                        10 </option>
-                                                                                                    <option value="11">
-                                                                                                        11 </option>
-                                                                                                    <option value="12">
-                                                                                                        12 </option>
-                                                                                                    <option value="13">
-                                                                                                        13 </option>
-                                                                                                    <option value="14">
-                                                                                                        14 </option>
-                                                                                                    <option value="15">
-                                                                                                        15 </option>
-                                                                                                    <option value="16">
-                                                                                                        16 </option>
-                                                                                                    <option value="17">
-                                                                                                        17 </option>
-                                                                                                    <option value="18">
-                                                                                                        18 </option>
-                                                                                                    <option value="19">
-                                                                                                        19 </option>
-                                                                                                    <option value="20">
-                                                                                                        20 </option>
-                                                                                                    <option value="21">
-                                                                                                        21 </option>
-                                                                                                    <option value="22">
-                                                                                                        22 </option>
-                                                                                                    <option value="23">
-                                                                                                        23 </option>
-                                                                                                    <option value="24">
-                                                                                                        24 </option>
-                                                                                                    <option value="25">
-                                                                                                        25 </option>
-                                                                                                    <option value="26">
-                                                                                                        26 </option>
-                                                                                                    <option value="27">
-                                                                                                        27 </option>
-                                                                                                    <option value="28">
-                                                                                                        28 </option>
-                                                                                                    <option value="29">
-                                                                                                        29 </option>
-                                                                                                    <option value="30">
-                                                                                                        30 </option>
-                                                                                                    <option value="31">
-                                                                                                        31 </option>
+                                                                                                    @for($i = 01; $i <= 31; $i++)
+                                                                                                    <option value="{{ $i }}">{{ $i }}</option>
+                                                                                                    @endfor
                                                                                                 </select>
                                                                                             </div>
                                                                                             <div class="form-group">
                                                                                                 <select name="dsp_year" class="dspdp-form-control dsp-form-control mt-0">
-                                                                                                    <option value="1961" selected>
-                                                                                                        1961 </option>
-                                                                                                    <option value="1962">
-                                                                                                        1962 </option>
-                                                                                                    <option value="1963">
-                                                                                                        1963 </option>
-                                                                                                    <option value="1964">
-                                                                                                        1964 </option>
-                                                                                                    <option value="1965">
-                                                                                                        1965 </option>
-                                                                                                    <option value="1966">
-                                                                                                        1966 </option>
-                                                                                                    <option value="1967">
-                                                                                                        1967 </option>
-                                                                                                    <option value="1968">
-                                                                                                        1968 </option>
-                                                                                                    <option value="1969">
-                                                                                                        1969 </option>
-                                                                                                    <option value="1970">
-                                                                                                        1970 </option>
-                                                                                                    <option value="1971">
-                                                                                                        1971 </option>
-                                                                                                    <option value="1972">
-                                                                                                        1972 </option>
-                                                                                                    <option value="1973">
-                                                                                                        1973 </option>
-                                                                                                    <option value="1974">
-                                                                                                        1974 </option>
-                                                                                                    <option value="1975">
-                                                                                                        1975 </option>
-                                                                                                    <option value="1976">
-                                                                                                        1976 </option>
-                                                                                                    <option value="1977">
-                                                                                                        1977 </option>
-                                                                                                    <option value="1978">
-                                                                                                        1978 </option>
-                                                                                                    <option value="1979">
-                                                                                                        1979 </option>
-                                                                                                    <option value="1980">
-                                                                                                        1980 </option>
-                                                                                                    <option value="1981">
-                                                                                                        1981 </option>
-                                                                                                    <option value="1982">
-                                                                                                        1982 </option>
-                                                                                                    <option value="1983">
-                                                                                                        1983 </option>
-                                                                                                    <option value="1984">
-                                                                                                        1984 </option>
-                                                                                                    <option value="1985">
-                                                                                                        1985 </option>
-                                                                                                    <option value="1986">
-                                                                                                        1986 </option>
-                                                                                                    <option value="1987">
-                                                                                                        1987 </option>
-                                                                                                    <option value="1988">
-                                                                                                        1988 </option>
-                                                                                                    <option value="1989">
-                                                                                                        1989 </option>
-                                                                                                    <option value="1990">
-                                                                                                        1990 </option>
-                                                                                                    <option value="1991">
-                                                                                                        1991 </option>
-                                                                                                    <option value="1992">
-                                                                                                        1992 </option>
-                                                                                                    <option value="1993">
-                                                                                                        1993 </option>
-                                                                                                    <option value="1994">
-                                                                                                        1994 </option>
-                                                                                                    <option value="1995">
-                                                                                                        1995 </option>
-                                                                                                    <option value="1996">
-                                                                                                        1996 </option>
-                                                                                                    <option value="1997">
-                                                                                                        1997 </option>
-                                                                                                    <option value="1998">
-                                                                                                        1998 </option>
-                                                                                                    <option value="1999">
-                                                                                                        1999 </option>
-                                                                                                    <option value="2000">
-                                                                                                        2000 </option>
-                                                                                                    <option value="2001">
-                                                                                                        2001 </option>
-                                                                                                    <option value="2002">
-                                                                                                        2002 </option>
-                                                                                                    <option value="2003">
-                                                                                                        2003 </option>
+                                                                                                    @for($i = 1961; $i <= date('Y'); $i++)
+                                                                                                        <option value="{{ $i }}">{{ $i }}</option>
+                                                                                                    @endfor
                                                                                                 </select>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="form-inline form-inline-wrap">
                                                                                         <div class="form-group">
-                                                                                            <label for="cmbCountry">Country<span class="wpee-mandatory-input">*</span></label>
+                                                                                            <label for="cmbCountry">
+                                                                                                Country
+                                                                                                <span class="wpee-mandatory-input">
+                                                                                                    *
+                                                                                                </span>
+                                                                                            </label>
                                                                                             <select id="cmbCountry" name="cmbCountry" class="country_trigger dspdp-form-control mt-0">
-                                                                                                <option value="0">Select Country</option>
-                                                                                                <option value='97'>Afghanistan</option>
-                                                                                                <option value='43'>Albania</option>
-                                                                                                <option value='142'>Algeria</option>
-                                                                                                <option value='44'>Andorra</option>
-                                                                                                <option value='143'>Angola</option>
-                                                                                                <option value='29'>Argentina</option>
-                                                                                                <option value='45'>Armenia</option>
-                                                                                                <option value='196'>Australia</option>
-                                                                                                <option value='46'>Austria</option>
-                                                                                                <option value='47'>Azerbaijan</option>
-                                                                                                <option value='3'>Bahamas</option>
-                                                                                                <option value='98'>Bahrain</option>
-                                                                                                <option value='99'>Bangladesh</option>
-                                                                                                <option value='4'>Barbados</option>
-                                                                                                <option value='48'>Belarus</option>
-                                                                                                <option value='49'>Belgium</option>
-                                                                                                <option value='5'>Belize</option>
-                                                                                                <option value='144'>Benin</option>
-                                                                                                <option value='6'>Bermuda</option>
-                                                                                                <option value='100'>Bhutan</option>
-                                                                                                <option value='30'>Bolivia</option>
-                                                                                                <option value='50'>Bosnia and Herzegovina</option>
-                                                                                                <option value='145'>Botswana</option>
-                                                                                                <option value='31'>Brazil</option>
-                                                                                                <option value='7'>British Virgin Islands</option>
-                                                                                                <option value='101'>Brunei</option>
-                                                                                                <option value='51'>Bulgaria</option>
-                                                                                                <option value='146'>Burkina Faso</option>
-                                                                                                <option value='147'>Burundi</option>
-                                                                                                <option value='102'>Cambodia</option>
-                                                                                                <option value='148'>Cameroon</option>
-                                                                                                <option value='2'>Canada</option>
-                                                                                                <option value='149'>Cape Verde</option>
-                                                                                                <option value='8'>Cayman Islands</option>
-                                                                                                <option value='150'>Central African Republic</option>
-                                                                                                <option value='151'>Chad</option>
-                                                                                                <option value='32'>Chile</option>
-                                                                                                <option value='103'>China</option>
-                                                                                                <option value='33'>Colombia</option>
-                                                                                                <option value='152'>Congo-Brazzaville</option>
-                                                                                                <option value='153'>Congo-Kinshasa</option>
-                                                                                                <option value='9'>Costa Rica</option>
-                                                                                                <option value='52'>Croatia</option>
-                                                                                                <option value='10'>Cuba</option>
-                                                                                                <option value='53'>Cyprus</option>
-                                                                                                <option value='54'>Czech Republic</option>
-                                                                                                <option value='55'>Denmark</option>
-                                                                                                <option value='154'>Djibouti</option>
-                                                                                                <option value='11'>Dominica</option>
-                                                                                                <option value='12'>Dominican Republic</option>
-                                                                                                <option value='104'>East Timor</option>
-                                                                                                <option value='34'>Ecuador</option>
-                                                                                                <option value='155'>Egypt</option>
-                                                                                                <option value='13'>El Salvador</option>
-                                                                                                <option value='156'>Equatorial Guinea</option>
-                                                                                                <option value='157'>Eritrea</option>
-                                                                                                <option value='56'>Estonia</option>
-                                                                                                <option value='158'>Ethiopia</option>
-                                                                                                <option value='35'>Falkland Islands</option>
-                                                                                                <option value='198'>Fiji</option>
-                                                                                                <option value='57'>Finland</option>
-                                                                                                <option value='58'>France</option>
-                                                                                                <option value='36'>French Guiana</option>
-                                                                                                <option value='199'>French Polynesia</option>
-                                                                                                <option value='159'>Gabon</option>
-                                                                                                <option value='160'>Gambia</option>
-                                                                                                <option value='59'>Georgia</option>
-                                                                                                <option value='60'>Germany</option>
-                                                                                                <option value='161'>Ghana</option>
-                                                                                                <option value='61'>Gibraltar</option>
-                                                                                                <option value='62'>Greece</option>
-                                                                                                <option value='14'>Greenland</option>
-                                                                                                <option value='15'>Grenada</option>
-                                                                                                <option value='16'>Guadeloupe</option>
-                                                                                                <option value='200'>Guam</option>
-                                                                                                <option value='17'>Guatemala</option>
-                                                                                                <option value='63'>Guernsey</option>
-                                                                                                <option value='162'>Guinea</option>
-                                                                                                <option value='163'>Guinea-Bissau</option>
-                                                                                                <option value='37'>Guyana</option>
-                                                                                                <option value='18'>Haiti</option>
-                                                                                                <option value='19'>Honduras</option>
-                                                                                                <option value='105'>Hong Kong</option>
-                                                                                                <option value='64'>Hungary</option>
-                                                                                                <option value='65'>Iceland</option>
-                                                                                                <option value='106'>India</option>
-                                                                                                <option value='107'>Indonesia</option>
-                                                                                                <option value='108'>Iran</option>
-                                                                                                <option value='109'>Iraq</option>
-                                                                                                <option value='66'>Ireland</option>
-                                                                                                <option value='67'>Isle of Man</option>
-                                                                                                <option value='110'>Israel</option>
-                                                                                                <option value='68'>Italy</option>
-                                                                                                <option value='164'>Ivory Coast</option>
-                                                                                                <option value='20'>Jamaica</option>
-                                                                                                <option value='111'>Japan</option>
-                                                                                                <option value='69'>Jersey</option>
-                                                                                                <option value='112'>Jordan</option>
-                                                                                                <option value='113'>Kazakhstan</option>
-                                                                                                <option value='165'>Kenya</option>
-                                                                                                <option value='201'>Kiribati</option>
-                                                                                                <option value='70'>Kosovo</option>
-                                                                                                <option value='114'>Kuwait</option>
-                                                                                                <option value='115'>Kyrgyzstan</option>
-                                                                                                <option value='116'>Laos</option>
-                                                                                                <option value='71'>Latvia</option>
-                                                                                                <option value='117'>Lebanon</option>
-                                                                                                <option value='166'>Lesotho</option>
-                                                                                                <option value='167'>Liberia</option>
-                                                                                                <option value='168'>Libya</option>
-                                                                                                <option value='72'>Liechtenstein</option>
-                                                                                                <option value='73'>Lithuania</option>
-                                                                                                <option value='74'>Luxembourg</option>
-                                                                                                <option value='118'>Macau</option>
-                                                                                                <option value='75'>Macedonia</option>
-                                                                                                <option value='169'>Madagascar</option>
-                                                                                                <option value='170'>Malawi</option>
-                                                                                                <option value='119'>Malaysia</option>
-                                                                                                <option value='120'>Maldives</option>
-                                                                                                <option value='171'>Mali</option>
-                                                                                                <option value='76'>Malta</option>
-                                                                                                <option value='202'>Marshall Islands</option>
-                                                                                                <option value='21'>Martinique</option>
-                                                                                                <option value='172'>Mauritania</option>
-                                                                                                <option value='173'>Mauritius</option>
-                                                                                                <option value='22'>Mexico</option>
-                                                                                                <option value='203'>Micronesia</option>
-                                                                                                <option value='77'>Moldova</option>
-                                                                                                <option value='78'>Monaco</option>
-                                                                                                <option value='121'>Mongolia</option>
-                                                                                                <option value='79'>Montenegro</option>
-                                                                                                <option value='23'>Montserrat</option>
-                                                                                                <option value='174'>Morocco</option>
-                                                                                                <option value='175'>Mozambique</option>
-                                                                                                <option value='122'>Myanmar (Burma)</option>
-                                                                                                <option value='176'>Namibia</option>
-                                                                                                <option value='204'>Nauru</option>
-                                                                                                <option value='123'>Nepal</option>
-                                                                                                <option value='80'>Netherlands</option>
-                                                                                                <option value='205'>New Caledonia</option>
-                                                                                                <option value='197'>New Zealand</option>
-                                                                                                <option value='24'>Nicaragua</option>
-                                                                                                <option value='177'>Niger</option>
-                                                                                                <option value='178'>Nigeria</option>
-                                                                                                <option value='124'>North Korea</option>
-                                                                                                <option value='81'>Norway</option>
-                                                                                                <option value='125'>Oman</option>
-                                                                                                <option value='126'>Pakistan</option>
-                                                                                                <option value='25'>Panama</option>
-                                                                                                <option value='206'>Papua New Guinea</option>
-                                                                                                <option value='38'>Paraguay</option>
-                                                                                                <option value='39'>Peru</option>
-                                                                                                <option value='127'>Philippines</option>
-                                                                                                <option value='82'>Poland</option>
-                                                                                                <option value='83'>Portugal</option>
-                                                                                                <option value='26'>Puerto Rico</option>
-                                                                                                <option value='128'>Qatar</option>
-                                                                                                <option value='179'>Reunion</option>
-                                                                                                <option value='84'>Romania</option>
-                                                                                                <option value='85'>Russia</option>
-                                                                                                <option value='180'>Rwanda</option>
-                                                                                                <option value='207'>Samoa</option>
-                                                                                                <option value='86'>San Marino</option>
-                                                                                                <option value='181'>Sao Tome and Principe</option>
-                                                                                                <option value='129'>Saudi Arabia</option>
-                                                                                                <option value='182'>Senegal</option>
-                                                                                                <option value='87'>Serbia</option>
-                                                                                                <option value='183'>Seychelles</option>
-                                                                                                <option value='184'>Sierra Leone</option>
-                                                                                                <option value='130'>Singapore</option>
-                                                                                                <option value='88'>Slovakia</option>
-                                                                                                <option value='89'>Slovenia</option>
-                                                                                                <option value='208'>Solomon Islands</option>
-                                                                                                <option value='185'>Somalia</option>
-                                                                                                <option value='186'>South Africa</option>
-                                                                                                <option value='131'>South Korea</option>
-                                                                                                <option value='90'>Spain</option>
-                                                                                                <option value='132'>Sri Lanka</option>
-                                                                                                <option value='187'>Sudan</option>
-                                                                                                <option value='40'>Suriname</option>
-                                                                                                <option value='188'>Swaziland</option>
-                                                                                                <option value='91'>Sweden</option>
-                                                                                                <option value='92'>Switzerland</option>
-                                                                                                <option value='133'>Syria</option>
-                                                                                                <option value='134'>Taiwan</option>
-                                                                                                <option value='135'>Tajikistan</option>
-                                                                                                <option value='189'>Tanzania</option>
-                                                                                                <option value='136'>Thailand</option>
-                                                                                                <option value='190'>Togo</option>
-                                                                                                <option value='209'>Tonga</option>
-                                                                                                <option value='27'>Trinidad and Tobago</option>
-                                                                                                <option value='191'>Tunisia</option>
-                                                                                                <option value='93'>Turkey</option>
-                                                                                                <option value='137'>Turkmenistan</option>
-                                                                                                <option value='210'>Tuvalu</option>
-                                                                                                <option value='192'>Uganda</option>
-                                                                                                <option value='94'>Ukraine</option>
-                                                                                                <option value='138'>United Arab Emirates</option>
-                                                                                                <option value='95'>United Kingdom</option>
-                                                                                                <option value='1' selected='selected'>United States</option>
-                                                                                                <option value='28'>United States Virgin Islands</option>
-                                                                                                <option value='41'>Uruguay</option>
-                                                                                                <option value='139'>Uzbekistan</option>
-                                                                                                <option value='211'>Vanuatu</option>
-                                                                                                <option value='96'>Vatican City</option>
-                                                                                                <option value='42'>Venezuela</option>
-                                                                                                <option value='140'>Vietnam</option>
-                                                                                                <option value='212'>Wallis and Futuna</option>
-                                                                                                <option value='193'>Western Sahara</option>
-                                                                                                <option value='141'>Yemen</option>
-                                                                                                <option value='194'>Zambia</option>
-                                                                                                <option value='195'>Zimbabwe</option>
+                                                                                                <option value="">
+                                                                                                    Select
+                                                                                                </option>
                                                                                             </select>
                                                                                             <span class="input-error">
                                                                                             </span>
@@ -1797,58 +1482,9 @@
                                                                                             <label for="cmbState">State</label>
                                                                                             <div id="state_change" class="">
                                                                                                 <select id="cmbStateid" name="cmbStateid" class="state_trigger dspdp-form-control mt-0">
-                                                                                                    <option value="0">Select State</option>
-                                                                                                    <option value='1'>Alabama</option>
-                                                                                                    <option value='2'>Alaska</option>
-                                                                                                    <option value='3'>Arizona</option>
-                                                                                                    <option value='4'>Arkansas</option>
-                                                                                                    <option value='5'>California</option>
-                                                                                                    <option value='6'>Colorado</option>
-                                                                                                    <option value='7'>Connecticut</option>
-                                                                                                    <option value='8'>Delaware</option>
-                                                                                                    <option value='9'>District of Columbia</option>
-                                                                                                    <option value='10'>Florida</option>
-                                                                                                    <option value='11'>Georgia</option>
-                                                                                                    <option value='12'>Hawaii</option>
-                                                                                                    <option value='13'>Idaho</option>
-                                                                                                    <option value='14'>Illinois</option>
-                                                                                                    <option value='15'>Indiana</option>
-                                                                                                    <option value='16'>Iowa</option>
-                                                                                                    <option value='17'>Kansas</option>
-                                                                                                    <option value='18'>Kentucky</option>
-                                                                                                    <option value='19'>Louisiana</option>
-                                                                                                    <option value='20'>Maine</option>
-                                                                                                    <option value='21'>Maryland</option>
-                                                                                                    <option value='22'>Massachusetts</option>
-                                                                                                    <option value='23'>Michigan</option>
-                                                                                                    <option value='24'>Minnesota</option>
-                                                                                                    <option value='25'>Mississippi</option>
-                                                                                                    <option value='26'>Missouri</option>
-                                                                                                    <option value='27'>Montana</option>
-                                                                                                    <option value='28'>Nebraska</option>
-                                                                                                    <option value='29'>Nevada</option>
-                                                                                                    <option value='30'>New Hampshire</option>
-                                                                                                    <option value='31'>New Jersey</option>
-                                                                                                    <option value='32'>New Mexico</option>
-                                                                                                    <option value='33'>New York</option>
-                                                                                                    <option value='34'>North Carolina</option>
-                                                                                                    <option value='35'>North Dakota</option>
-                                                                                                    <option value='36'>Ohio</option>
-                                                                                                    <option value='37'>Oklahoma</option>
-                                                                                                    <option value='38'>Oregon</option>
-                                                                                                    <option value='39'>Pennsylvania</option>
-                                                                                                    <option value='40'>Rhode Island</option>
-                                                                                                    <option value='41'>South Carolina</option>
-                                                                                                    <option value='42'>South Dakota</option>
-                                                                                                    <option value='43'>Tennessee</option>
-                                                                                                    <option value='44'>Texas</option>
-                                                                                                    <option value='45'>Utah</option>
-                                                                                                    <option value='46'>Vermont</option>
-                                                                                                    <option value='47'>Virginia</option>
-                                                                                                    <option value='48'>Washington</option>
-                                                                                                    <option value='49'>West Virginia</option>
-                                                                                                    <option value='50'>Wisconsin</option>
-                                                                                                    <option value='51'>Wyoming</option>
+                                                                                                    <option value="">
+                                                                                                        Select
+                                                                                                    </option>
                                                                                                 </select>
                                                                                             </div>
                                                                                         </div>
@@ -2225,8 +1861,7 @@
                                                                             <div class="wpee-edit-profile-form">
                                                                                 <div class="image-edit-profile form-inline">
                                                                                     <div class="form-group">
-                                                                                        <img decoding="async" src="
-				https://nikaah.wpdating.com/wp-content/plugins/wpdating-elementor-extension/public/images/default-profile-img.jpg					" alt="" class="img dspdp-img-responsive" />
+                                                                                        <img decoding="async" src="{{ asset('images/default-profile-img.jpg') }}" alt="" class="img dspdp-img-responsive" />
                                                                                     </div>
                                                                                     <div class="form-group">
                                                                                         <input type="file" name="photo_upload" id="photo_upload" class="dspdp-form-control dsp-form-control  dspdp-xs-form-group mt-0" value="">
@@ -2393,23 +2028,15 @@
             <div class="wpee-message">
             </div>
         </div>
-    </div><a id="toTop" href="#"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+    </div>
+    <a id="toTop" href="#"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
     <link rel='stylesheet' id='wpdating-gallery-styles-css' href='https://nikaah.wpdating.com/wp-content/plugins/dsp_dating/wpdating-gallery/public/css/wpdating-gallery-public.css?ver=6.1.1' media='all' />
     <link rel='stylesheet' id='wpdating-gallery-pintura-styles-css' href='https://nikaah.wpdating.com/wp-content/plugins/dsp_dating/wpdating-gallery/lib/css/pintura.min.css?ver=6.1.1' media='all' />
     <link rel='stylesheet' id='wpdating-gallery-blueimp-styles-css' href='//blueimp.github.io/Gallery/css/blueimp-gallery.min.css?ver=6.1.1' media='all' />
     <link rel='stylesheet' id='wpdating-gallery-css-fileupload-css' href='https://nikaah.wpdating.com/wp-content/plugins/dsp_dating/wpdating-gallery/lib/css/jquery.fileupload.css?ver=6.1.1' media='all' />
     <link rel='stylesheet' id='wpdating-gallery-css-fileupload-ui-css' href='https://nikaah.wpdating.com/wp-content/plugins/dsp_dating/wpdating-gallery/lib/css/jquery.fileupload-ui.css?ver=6.1.1' media='all' />
     <link rel='stylesheet' id='wpdating-gallery-toast-css' href='//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css?ver=6.1.1' media='all' />
-    <script src='https://nikaah.wpdating.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.7.4' id='swv-js'></script>
-    <script id='contact-form-7-js-extra'>
-        var wpcf7 = {
-            "api": {
-                "root": "https:\/\/nikaah.wpdating.com\/wp-json\/",
-                "namespace": "contact-form-7\/v1"
-            },
-            "cached": "1"
-        };
-    </script>
+    
     <script src='https://nikaah.wpdating.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.7.4' id='contact-form-7-js'></script>
     <script src='https://nikaah.wpdating.com/wp-content/plugins/dsp_dating/colorbox/jquery.colorbox.min.js?ver=1.6.4' id='colorbox-js'></script>
     <script src='https://nikaah.wpdating.com/wp-includes/js/jquery/ui/core.min.js?ver=7.4.0' id='dspjqui-js'></script>

@@ -150,7 +150,7 @@ jQuery("#wpee-registration-form").on('submit', event => {
 
 
     jQuery.ajax({
-        url: 'member-registration',
+        url: appUrl + '/member-registration',
         type: 'POST',
         data: registerValidationFormData,
         contentType: false,
@@ -265,10 +265,14 @@ function submitRegisterFormAjaxRequest(parentTarget) {
 jQuery('#login-form').on('submit', async(event) => {
     event.preventDefault();
 
+    alert('asdas');
+
     jQuery("#login-form .form-group").removeClass('form-group-error');
     jQuery('#login-form .form-group .input-error').remove();
     jQuery('.wpee-login-error').hide(420);
     jQuery('.wpee-login-error').html('');
+
+
 
     const loginForm = event.currentTarget;
 
@@ -289,8 +293,10 @@ jQuery('#login-form').on('submit', async(event) => {
         redirect_to: jQuery('input[name="redirect_to"]', loginForm).val().trim()
     };
 
+    alert(appUrl);
+
     await jQuery.ajax({
-        url: 'login',
+        url: appUrl + '/member-login',
         data: data,
         type: 'POST',
         dataType: 'json',
@@ -305,21 +311,22 @@ jQuery('#login-form').on('submit', async(event) => {
             });
         },
         success: result => {
-            window.location.href = 'home';
+            console.log(result);
+            // window.location.href = 'home';
             if (result.success === 1) {
                 // window.location = result.redirect;
-                window.location = '/';
+                window.location = appUrl;
                 return true;
             } else {
                 if (result.error === 'invalid_email') {
                     jQuery('.user-login-group').addClass('form-group-error');
                     jQuery('.user-login-group').append('<span class="input-error"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>' + 'Invalid Email' + '</span>');
-                } else if (result.error === 'invalid_username') {
+                } else if (result.error === 'empty_email_or_pass') {
                     jQuery('.user-login-group').addClass('form-group-error');
-                    jQuery('.user-login-group').append('<span class="input-error"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>' + 'Invalid Username' + '</span>');
-                } else if (result.error === 'incorrect_password') {
+                    jQuery('.user-login-group').append('<span class="input-error"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>' + 'Email and password is required' + '</span>');
+                } else if (result.error === 'wrong_credentials') {
                     jQuery('.user-password-group').addClass('form-group-error');
-                    jQuery('.user-password-group').append('<span class="input-error"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>' + 'Invalid Password' + '</span>');
+                    jQuery('.user-password-group').append('<span class="input-error"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>' + 'Invalid Email or Password' + '</span>');
                 } else if (result.error === 'denied') {
                     jQuery('.wpee-login-error').html('You need to activate your account.');
                     jQuery('.wpee-login-error').show(500);
@@ -333,12 +340,14 @@ jQuery('#login-form').on('submit', async(event) => {
         },
         complete: () => {
             jQuery(loginForm).unblock();
-            window.location = '/';
+            // window.location = appUrl;
         }
     });
+    console.log("🚀 ~ file: customform.js:345 ~ jQuery ~ result:", result)
+    console.log("🚀 ~ file: customform.js:345 ~ jQuery ~ result:", result)
 });
 
-jQuery('.user-login-group').focusin(event => {
+jQuery('.user-login-group').on('focusin', event => {
     jQuery(event.currentTarget).removeClass('form-group-error');
     jQuery('.user-login-group .input-error').remove();
 });

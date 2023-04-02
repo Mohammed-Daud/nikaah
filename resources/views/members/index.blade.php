@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>Members &#8211; Nikaah</title>
     <meta name='robots' content='noindex, nofollow' />
     <link rel='dns-prefetch' href='//connect.facebook.net' />
@@ -635,6 +635,7 @@
     <link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://nikaah.wpdating.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' />
     <link rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://nikaah.wpdating.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' media='all' />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <script>const appUrl = "{{ config('app.url') }}";</script>
     <script src='https://nikaah.wpdating.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js'></script>
     <script src='https://nikaah.wpdating.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
     <script src='https://nikaah.wpdating.com/wp-content/plugins/dsp-login/js/blockui.js?ver=1.0' id='blockui-js'></script>

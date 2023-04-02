@@ -57,7 +57,7 @@
                         </div>
                         <div class="form-inline remember-me-group">
                             <div class="form-group">
-                                <input name="remember" class="checkbox" id="remember-me" value="forever" type="checkbox">
+                                <input name="remember" class="checkbox" id="remember-me" value="1" type="checkbox">
                                 <label for="remember-me">Remember Me</label>
                             </div>
                             <div class="form-group">

@@ -48,7 +48,6 @@ class MemberAuthController extends Controller
                     'toastr' => 'Email is already registered.'
                 ]
             ]);
-            return response()->json(['success' => 'User created successfully!']);
         }
 
         $user = User::create([
@@ -66,12 +65,12 @@ class MemberAuthController extends Controller
         ]);
 
 
-        if (Auth::attempt(['email' => $user->email, 'password' => $request->password])) {
+        if (Auth::attempt(['email' => $user->email, 'password' => $request->password, 'user_type' => 'member'])) {
             // Authentication passed...
             return response()->json([
                 'status' => true,
                 'auto_login' => true,
-                'redirect_url' => 'members'
+                'redirect_url' => 'profile/'.$user->id.'/edit-profile'
             ],200);
         }
         
@@ -118,6 +117,43 @@ class MemberAuthController extends Controller
         return response()->json([
             'status' => true
         ],200);
+    }
+
+    public function login(Request $request){
+
+        
+        $existingMember = User::where([
+            'email' => $request->email,
+        ])->count();
+
+        if(!$existingMember){
+            return response()->json([
+                'error' => 'invalid_email',
+            ]);
+        }
+
+        if(!$request->email || !$request->password){
+            return response()->json([
+                'error' => 'empty_email_or_pass',
+            ]);
+        }
+
+        $remember = $request->remember;
+        if (Auth::attempt([
+            'email'     => $request->email, 
+            'password'  => $request->password,
+            'user_type' => 'member',
+        ],$remember)) {
+            return response()->json([
+                'success' => 1
+            ],200);
+        }
+
+        
+        
+        return response()->json([
+            'error' => 'wrong_credentials',
+        ]);
     }
 
     private function generatePassport() {

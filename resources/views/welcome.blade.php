@@ -10,6 +10,7 @@
     <link rel="preload" as="style" href="css/css">
     <link rel="stylesheet" href="css/css" media="all" onload="this.media=&#39;all&#39;">
     <link rel="stylesheet" id="elementor-post-241-css" href="./contactus_files/post-241.css" media="all">
+    <script>const appUrl = "{{ config('app.url') }}";</script>
     <script id='wpee-custom-elementor-js-extra'>
     var eleObj = {"wpdate_url":"","ajax_url":"","strings":{"please_wait":"Please Wait","failure":"Something went wrong. Please try again later.","feed":{"post":"Post","posting":"Posting","just_added_new":"just added new","status_update":"status update."}},"lang":""};
     </script>
